@@ -43,7 +43,7 @@ function App() {
       <Hero />
       
       {/* Infinite Scrolling Partner Brand Logos Ticker */}
-      <section className="bg-[#2C2B29] border-t border-b border-white/5 py-8 overflow-hidden relative z-20">
+      <section className="bg-[#2C2B29] border-t border-b border-white/5 py-10 md:py-12 overflow-hidden relative z-20">
         {/* Soft fading edges using gradient overlays */}
         <div className="absolute inset-y-0 left-0 w-16 md:w-32 bg-gradient-to-r from-[#2C2B29] to-transparent z-30 pointer-events-none"></div>
         <div className="absolute inset-y-0 right-0 w-16 md:w-32 bg-gradient-to-l from-[#2C2B29] to-transparent z-30 pointer-events-none"></div>
@@ -55,11 +55,11 @@ function App() {
               <img 
                 src={logo.image} 
                 alt={logo.name} 
-                className="h-8 md:h-12 w-auto object-contain opacity-45 hover:opacity-85 transition-opacity duration-300 pointer-events-auto cursor-pointer"
+                className="h-12 md:h-16 w-auto object-contain opacity-45 hover:opacity-85 transition-opacity duration-300 pointer-events-auto cursor-pointer"
                 style={{ filter: 'invert(1)', mixBlendMode: 'screen' }}
                 loading="lazy"
               />
-              <span className="text-white/15 text-xs font-light select-none shrink-0">•</span>
+              <span className="text-white/15 text-sm font-semibold select-none shrink-0">•</span>
             </span>
           ))}
 
@@ -69,11 +69,11 @@ function App() {
               <img 
                 src={logo.image} 
                 alt={logo.name} 
-                className="h-8 md:h-12 w-auto object-contain opacity-45 hover:opacity-85 transition-opacity duration-300 pointer-events-auto cursor-pointer"
+                className="h-12 md:h-16 w-auto object-contain opacity-45 hover:opacity-85 transition-opacity duration-300 pointer-events-auto cursor-pointer"
                 style={{ filter: 'invert(1)', mixBlendMode: 'screen' }}
                 loading="lazy"
               />
-              <span className="text-white/15 text-xs font-light select-none shrink-0">•</span>
+              <span className="text-white/15 text-sm font-semibold select-none shrink-0">•</span>
             </span>
           ))}
         </div>
