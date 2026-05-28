@@ -1,0 +1,6 @@
+{
+  "name": "Good Life Meds",
+  "description": "Healthcare and prescription medications online, delivered to your door.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
