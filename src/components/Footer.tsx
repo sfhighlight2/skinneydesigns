@@ -38,14 +38,18 @@ export function Footer() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 md:gap-8 mb-24 border-t border-white/10 pt-16">
-          <div className="col-span-1">
+          <div className="col-span-1 pr-4 lg:pr-8">
             <h2 className="text-3xl font-serif text-white/90 leading-tight mb-8">
               Tighten, lift, transform —<br/>
               <span className="text-gray-400">without surgery</span>
             </h2>
-            <div className="flex bg-white/10 backdrop-blur rounded-full p-1 border border-white/20">
-              <input type="email" placeholder="Your email..." className="bg-transparent text-white px-4 py-3 outline-none flex-grow placeholder-gray-400" />
-              <button className="bg-white text-black px-6 py-2 rounded-full font-medium hover:bg-gray-100 transition-colors flex items-center gap-2">
+            <div className="flex bg-white/10 backdrop-blur rounded-full p-1 border border-white/20 w-full max-w-xs">
+              <input 
+                type="email" 
+                placeholder="Your email..." 
+                className="bg-transparent text-white pl-4 pr-2 py-2.5 outline-none flex-grow min-w-0 placeholder-gray-400 text-sm" 
+              />
+              <button className="bg-white text-black px-5 py-2.5 rounded-full font-medium hover:bg-gray-100 transition-colors flex items-center gap-1.5 text-sm shrink-0">
                 Join <ArrowRight className="w-4 h-4" />
               </button>
             </div>
