@@ -106,7 +106,7 @@ export function SearchDrawer({ isOpen, onClose }: SearchDrawerProps) {
           </div>
 
           {/* Right Column: Skincare products & editorials */}
-          <div className="md:col-span-9 md:border-l md:border-neutral-100 md:pl-12 flex flex-col">
+          <div className="md:col-span-8 md:border-l md:border-neutral-100 md:pl-12 flex flex-col">
             
             {/* Tabs selector */}
             <div className="flex items-center gap-8 border-b border-neutral-100 pb-4 mb-6 select-none">
@@ -119,18 +119,15 @@ export function SearchDrawer({ isOpen, onClose }: SearchDrawerProps) {
               </button>
             </div>
 
-            {/* Skincare products grid (4-column on desktop) */}
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mt-6">
+            {/* Skincare products grid (2x2 grid) */}
+            <div className="grid grid-cols-2 gap-4 sm:gap-6 mt-6">
               
               {/* Product 1 */}
               <div className="group flex flex-col items-center select-none">
-                <div className="relative aspect-[3/4] w-full bg-[#f9f7f6] rounded-[24px] overflow-hidden flex items-center justify-center p-6 cursor-pointer">
-                  <img 
-                    src={serumImg} 
-                    alt="Luminaire Clinical Advanced Moisture Serum" 
-                    className="object-contain max-h-[85%] max-w-[85%] transition-transform duration-500 group-hover:scale-[1.03]"
-                    loading="lazy"
-                  />
+                <div className="relative aspect-[3/4] w-full bg-[#f9f7f6] rounded-[24px] overflow-hidden flex flex-col items-center justify-center p-6 cursor-pointer">
+                  <span className="text-[10px] font-mono tracking-widest text-neutral-400 uppercase">
+                    coming soon
+                  </span>
                   
                   {/* Sliding Quickshop Button */}
                   <button className="absolute bottom-6 left-1/2 -translate-x-1/2 border-2 border-black rounded-full py-2.5 px-6 text-[9px] font-bold tracking-[0.2em] bg-white hover:bg-black hover:text-white transition-all uppercase opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 duration-300 shadow-sm cursor-pointer active:scale-95">
@@ -141,7 +138,7 @@ export function SearchDrawer({ isOpen, onClose }: SearchDrawerProps) {
                 {/* Meta details */}
                 <div className="mt-4 text-center">
                   <span className="text-[9px] font-bold tracking-[0.25em] text-neutral-400 uppercase font-mono block mb-1">
-                    luminaire clinical
+                    skinney
                   </span>
                   <h3 className="font-serif text-base sm:text-lg text-black leading-tight lowercase">
                     advanced moisture serum
@@ -154,13 +151,10 @@ export function SearchDrawer({ isOpen, onClose }: SearchDrawerProps) {
 
               {/* Product 2 */}
               <div className="group flex flex-col items-center select-none">
-                <div className="relative aspect-[3/4] w-full bg-[#f9f7f6] rounded-[24px] overflow-hidden flex items-center justify-center p-6 cursor-pointer">
-                  <img 
-                    src={oilImg} 
-                    alt="Luminae Clinical Botanical Repair Face Oil" 
-                    className="object-contain max-h-[85%] max-w-[85%] transition-transform duration-500 group-hover:scale-[1.03]"
-                    loading="lazy"
-                  />
+                <div className="relative aspect-[3/4] w-full bg-[#f9f7f6] rounded-[24px] overflow-hidden flex flex-col items-center justify-center p-6 cursor-pointer">
+                  <span className="text-[10px] font-mono tracking-widest text-neutral-400 uppercase">
+                    coming soon
+                  </span>
                   
                   {/* Sliding Quickshop Button */}
                   <button className="absolute bottom-6 left-1/2 -translate-x-1/2 border-2 border-black rounded-full py-2.5 px-6 text-[9px] font-bold tracking-[0.2em] bg-white hover:bg-black hover:text-white transition-all uppercase opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 duration-300 shadow-sm cursor-pointer active:scale-95">
@@ -171,7 +165,7 @@ export function SearchDrawer({ isOpen, onClose }: SearchDrawerProps) {
                 {/* Meta details */}
                 <div className="mt-4 text-center">
                   <span className="text-[9px] font-bold tracking-[0.25em] text-neutral-400 uppercase font-mono block mb-1">
-                    luminae clinical
+                    skinney
                   </span>
                   <h3 className="font-serif text-base sm:text-lg text-black leading-tight lowercase">
                     botanical repair face oil
@@ -182,7 +176,7 @@ export function SearchDrawer({ isOpen, onClose }: SearchDrawerProps) {
                 </div>
               </div>
 
-              {/* Product 3 (Placeholder Box) */}
+              {/* Product 3 */}
               <div className="group flex flex-col items-center select-none">
                 <div className="relative aspect-[3/4] w-full bg-[#f9f7f6] rounded-[24px] overflow-hidden flex flex-col items-center justify-center p-6 cursor-pointer">
                   <span className="text-[10px] font-mono tracking-widest text-neutral-400 uppercase">
@@ -198,7 +192,7 @@ export function SearchDrawer({ isOpen, onClose }: SearchDrawerProps) {
                 {/* Meta details */}
                 <div className="mt-4 text-center">
                   <span className="text-[9px] font-bold tracking-[0.25em] text-neutral-400 uppercase font-mono block mb-1">
-                    luminaire clinical
+                    skinney
                   </span>
                   <h3 className="font-serif text-base sm:text-lg text-black leading-tight lowercase">
                     daily defense spf 50
@@ -209,7 +203,7 @@ export function SearchDrawer({ isOpen, onClose }: SearchDrawerProps) {
                 </div>
               </div>
 
-              {/* Product 4 (Placeholder Box) */}
+              {/* Product 4 */}
               <div className="group flex flex-col items-center select-none">
                 <div className="relative aspect-[3/4] w-full bg-[#f9f7f6] rounded-[24px] overflow-hidden flex flex-col items-center justify-center p-6 cursor-pointer">
                   <span className="text-[10px] font-mono tracking-widest text-neutral-400 uppercase">
@@ -225,7 +219,7 @@ export function SearchDrawer({ isOpen, onClose }: SearchDrawerProps) {
                 {/* Meta details */}
                 <div className="mt-4 text-center">
                   <span className="text-[9px] font-bold tracking-[0.25em] text-neutral-400 uppercase font-mono block mb-1">
-                    luminae clinical
+                    skinney
                   </span>
                   <h3 className="font-serif text-base sm:text-lg text-black leading-tight lowercase">
                     soothing recovery cream
