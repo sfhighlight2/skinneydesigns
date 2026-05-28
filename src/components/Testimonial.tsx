@@ -17,8 +17,8 @@ const testimonials = [
   {
     quote: "The most comfortable skin tightening session I've ever had, with instant visible lift.",
     author: "Elena Frost",
-    role: "Soho Patient",
-    company: "SKINNEY Soho",
+    role: "East 60th Street Patient",
+    company: "SKINNEY East 60th Street",
   },
 ];
 

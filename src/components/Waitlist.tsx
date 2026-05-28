@@ -58,14 +58,15 @@ export function Waitlist() {
                 <input id="waitlist-phone" type="tel" placeholder="Phone Number" className="w-full px-5 py-4 rounded-xl border border-gray-200 focus:border-[#2C2B29] focus:outline-none transition-colors" />
               </div>
             </div>
-            <div>
-              <label htmlFor="waitlist-location" className="sr-only">Preferred Location</label>
-              <select id="waitlist-location" className="w-full px-5 py-4 rounded-xl border border-gray-200 focus:border-[#2C2B29] focus:outline-none transition-colors bg-white text-gray-500">
-                 <option value="">Preferred Location (NYC)</option>
-                 <option value="flatiron">Flatiron</option>
-                 <option value="soho">Soho</option>
-              </select>
-            </div>
+             <div>
+               <label htmlFor="waitlist-location" className="sr-only">Preferred Location</label>
+               <select id="waitlist-location" className="w-full px-5 py-4 rounded-xl border border-gray-200 focus:border-[#2C2B29] focus:outline-none transition-colors bg-white text-gray-500">
+                  <option value="">Preferred Location (NYC & Miami)</option>
+                  <option value="flatiron">Flatiron Flagship</option>
+                  <option value="east-60th">East 60th Street</option>
+                  <option value="saks-miami">Saks Fifth Ave Miami</option>
+               </select>
+             </div>
             
             <Button variant="primary" className="py-4 text-lg mt-4 w-full md:w-auto md:ml-auto">
               Reserve My Spot

@@ -60,9 +60,10 @@ export function IntroSection() {
               <div>
                 <label htmlFor="intro-location" className="sr-only">Preferred Location</label>
                 <select id="intro-location" className="w-full px-4 py-3 text-sm rounded-xl border border-gray-200 focus:border-[#2C2B29] focus:outline-none transition-colors bg-white text-gray-500 font-normal">
-                   <option value="">Preferred Location (NYC)</option>
-                   <option value="flatiron">Flatiron</option>
-                   <option value="soho">Soho</option>
+                   <option value="">Preferred Location (NYC & Miami)</option>
+                   <option value="flatiron">Flatiron Flagship</option>
+                   <option value="east-60th">East 60th Street</option>
+                   <option value="saks-miami">Saks Fifth Ave Miami</option>
                 </select>
               </div>
               
