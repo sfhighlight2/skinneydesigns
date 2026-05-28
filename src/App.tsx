@@ -5,8 +5,9 @@ import { ProductSection } from './components/ProductSection';
 import { Process } from './components/Process';
 import { WhyChoose } from './components/WhyChoose';
 import { Testimonial } from './components/Testimonial';
-import { Waitlist } from './components/Waitlist';
 import { FAQ } from './components/FAQ';
+import { Waitlist } from './components/Waitlist';
+import { Locations } from './components/Locations';
 import { Footer } from './components/Footer';
 import { xerfProducts, xerfTreatmentAreas, faqs } from './data';
 import showcaseImg from '../assets/52fc8607d98d5167945b70c8098f8693.png';
@@ -108,6 +109,8 @@ function App() {
       <FAQ faqs={faqs} />
       
       <Waitlist />
+      
+      <Locations />
       
       <Footer />
     </div>
