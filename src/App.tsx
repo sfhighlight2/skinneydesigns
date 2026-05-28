@@ -55,7 +55,7 @@ function App() {
               <img 
                 src={logo.image} 
                 alt={logo.name} 
-                className="h-6 md:h-8 w-auto object-contain opacity-45 hover:opacity-85 transition-opacity duration-300 pointer-events-auto cursor-pointer"
+                className="h-8 md:h-12 w-auto object-contain opacity-45 hover:opacity-85 transition-opacity duration-300 pointer-events-auto cursor-pointer"
                 style={{ filter: 'invert(1)', mixBlendMode: 'screen' }}
                 loading="lazy"
               />
@@ -69,7 +69,7 @@ function App() {
               <img 
                 src={logo.image} 
                 alt={logo.name} 
-                className="h-6 md:h-8 w-auto object-contain opacity-45 hover:opacity-85 transition-opacity duration-300 pointer-events-auto cursor-pointer"
+                className="h-8 md:h-12 w-auto object-contain opacity-45 hover:opacity-85 transition-opacity duration-300 pointer-events-auto cursor-pointer"
                 style={{ filter: 'invert(1)', mixBlendMode: 'screen' }}
                 loading="lazy"
               />
