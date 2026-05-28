@@ -1,9 +1,11 @@
 import { useState } from 'react';
 import { ChevronDown, Search, CalendarPlus, Menu, X } from 'lucide-react';
+import { SearchDrawer } from './SearchDrawer';
 import logoImg from '../../assets/images.png';
 
 export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-100 font-sans">
@@ -43,7 +45,11 @@ export function Navbar() {
             </div>
             
             <div className="flex items-center space-x-6 ml-auto">
-              <button className="text-black hover:opacity-70 transition-opacity animate-none" aria-label="Search">
+              <button 
+                onClick={() => setSearchOpen(true)}
+                className="text-black hover:opacity-70 transition-opacity animate-none cursor-pointer" 
+                aria-label="Search"
+              >
                 <Search className="w-5 h-5" strokeWidth={2} />
               </button>
               <button className="flex items-center gap-2.5 border-2 border-black rounded-full px-6 py-2.5 hover:bg-gray-50 transition-colors">
@@ -53,8 +59,16 @@ export function Navbar() {
             </div>
           </div>
 
-          {/* Spacer for mobile to center logo */}
-          <div className="xl:hidden w-6"></div>
+          {/* Search Button for Mobile */}
+          <div className="xl:hidden flex items-center justify-end w-6">
+            <button 
+              onClick={() => setSearchOpen(true)}
+              className="text-black hover:opacity-70 transition-opacity animate-none cursor-pointer" 
+              aria-label="Search"
+            >
+              <Search className="w-5 h-5" strokeWidth={2} />
+            </button>
+          </div>
         </div>
       </div>
 
@@ -78,6 +92,9 @@ export function Navbar() {
           </div>
         </div>
       </div>
+
+      {/* Slide-out Search Panel */}
+      <SearchDrawer isOpen={searchOpen} onClose={() => setSearchOpen(false)} />
     </nav>
   );
 }
