@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { Search, X } from 'lucide-react';
 import serumImg from '../../assets/skincare-serum.png';
 import oilImg from '../../assets/skincare-oil.png';
+import logoImg from '../../assets/images.png';
 
 interface SearchDrawerProps {
   isOpen: boolean;
@@ -40,6 +41,11 @@ export function SearchDrawer({ isOpen, onClose }: SearchDrawerProps) {
           isOpen ? 'translate-x-0' : '-translate-x-full'
         }`}
       >
+        {/* Top Header Logo */}
+        <div className="mb-8 flex items-center select-none">
+          <img src={logoImg} alt="SKINNEY Medspa Logo" className="h-7 md:h-8 w-auto object-contain" />
+        </div>
+
         {/* Top Header Search Bar */}
         <div className="relative flex items-center border-b-2 border-neutral-100 pb-4">
           <Search className="w-6 h-6 text-neutral-400 mr-4 shrink-0" strokeWidth={1.5} />
@@ -64,34 +70,34 @@ export function SearchDrawer({ isOpen, onClose }: SearchDrawerProps) {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 mt-12 flex-1 overflow-y-auto pr-2">
           
           {/* Left Column: Trending medspa keywords */}
-          <div className="md:col-span-4 flex flex-col justify-between select-none">
+          <div className="md:col-span-3 flex flex-col justify-between select-none">
             <div>
               <span className="text-[10px] font-bold tracking-[0.2em] text-neutral-400 uppercase font-mono block mb-6">
                 trending
               </span>
               
               <div className="flex flex-col items-start">
-                <button className="text-left font-serif text-2xl sm:text-3xl font-light text-black hover:text-neutral-400 transition-colors block mb-5 lowercase cursor-pointer">
+                <button className="text-left font-serif text-xl sm:text-2xl font-light text-black hover:text-neutral-400 transition-colors block mb-5 lowercase cursor-pointer">
                   xerf skin tightening
                 </button>
-                <button className="text-left font-serif text-2xl sm:text-3xl font-light text-black hover:text-neutral-400 transition-colors block mb-5 lowercase cursor-pointer">
+                <button className="text-left font-serif text-xl sm:text-2xl font-light text-black hover:text-neutral-400 transition-colors block mb-5 lowercase cursor-pointer">
                   laser hair removal
                 </button>
-                <button className="text-left font-serif text-2xl sm:text-3xl font-light text-black hover:text-neutral-400 transition-colors block mb-5 lowercase cursor-pointer">
+                <button className="text-left font-serif text-xl sm:text-2xl font-light text-black hover:text-neutral-400 transition-colors block mb-5 lowercase cursor-pointer">
                   botox & fillers
                 </button>
-                <button className="text-left font-serif text-2xl sm:text-3xl font-light text-black hover:text-neutral-400 transition-colors block mb-5 lowercase cursor-pointer">
+                <button className="text-left font-serif text-xl sm:text-2xl font-light text-black hover:text-neutral-400 transition-colors block mb-5 lowercase cursor-pointer">
                   chemical peels
                 </button>
-                <button className="text-left font-serif text-2xl sm:text-3xl font-light text-black hover:text-neutral-400 transition-colors block mb-5 lowercase cursor-pointer">
+                <button className="text-left font-serif text-xl sm:text-2xl font-light text-black hover:text-neutral-400 transition-colors block mb-5 lowercase cursor-pointer">
                   body contouring
                 </button>
-                <button className="text-left font-serif text-2xl sm:text-3xl font-light text-black hover:text-neutral-400 transition-colors block mb-5 lowercase cursor-pointer">
+                <button className="text-left font-serif text-xl sm:text-2xl font-light text-black hover:text-neutral-400 transition-colors block mb-5 lowercase cursor-pointer">
                   hydrafacial
                 </button>
                 <button 
                   onClick={onClose} 
-                  className="text-left font-serif text-2xl sm:text-3xl font-light text-neutral-400 hover:text-black transition-colors block mb-5 lowercase cursor-pointer mt-6"
+                  className="text-left font-serif text-xl sm:text-2xl font-light text-neutral-400 hover:text-black transition-colors block mb-5 lowercase cursor-pointer mt-6"
                 >
                   close search
                 </button>
@@ -100,7 +106,7 @@ export function SearchDrawer({ isOpen, onClose }: SearchDrawerProps) {
           </div>
 
           {/* Right Column: Skincare products & editorials */}
-          <div className="md:col-span-8 md:border-l md:border-neutral-100 md:pl-12 flex flex-col">
+          <div className="md:col-span-9 md:border-l md:border-neutral-100 md:pl-12 flex flex-col">
             
             {/* Tabs selector */}
             <div className="flex items-center gap-8 border-b border-neutral-100 pb-4 mb-6 select-none">
@@ -113,12 +119,12 @@ export function SearchDrawer({ isOpen, onClose }: SearchDrawerProps) {
               </button>
             </div>
 
-            {/* Skincare products grid */}
-            <div className="grid grid-cols-2 gap-4 sm:gap-6 md:gap-8">
+            {/* Skincare products grid (4-column on desktop) */}
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mt-6">
               
               {/* Product 1 */}
               <div className="group flex flex-col items-center select-none">
-                <div className="relative aspect-[3/4] w-full bg-[#f8f7f5] rounded-[24px] overflow-hidden flex items-center justify-center p-6 cursor-pointer">
+                <div className="relative aspect-[3/4] w-full bg-[#f9f7f6] rounded-[24px] overflow-hidden flex items-center justify-center p-6 cursor-pointer">
                   <img 
                     src={serumImg} 
                     alt="Luminaire Clinical Advanced Moisture Serum" 
@@ -148,7 +154,7 @@ export function SearchDrawer({ isOpen, onClose }: SearchDrawerProps) {
 
               {/* Product 2 */}
               <div className="group flex flex-col items-center select-none">
-                <div className="relative aspect-[3/4] w-full bg-[#f8f7f5] rounded-[24px] overflow-hidden flex items-center justify-center p-6 cursor-pointer">
+                <div className="relative aspect-[3/4] w-full bg-[#f9f7f6] rounded-[24px] overflow-hidden flex items-center justify-center p-6 cursor-pointer">
                   <img 
                     src={oilImg} 
                     alt="Luminae Clinical Botanical Repair Face Oil" 
@@ -172,6 +178,60 @@ export function SearchDrawer({ isOpen, onClose }: SearchDrawerProps) {
                   </h3>
                   <span className="text-xs text-neutral-500 font-mono mt-1 block">
                     $105
+                  </span>
+                </div>
+              </div>
+
+              {/* Product 3 (Placeholder Box) */}
+              <div className="group flex flex-col items-center select-none">
+                <div className="relative aspect-[3/4] w-full bg-[#f9f7f6] rounded-[24px] overflow-hidden flex flex-col items-center justify-center p-6 cursor-pointer">
+                  <span className="text-[10px] font-mono tracking-widest text-neutral-400 uppercase">
+                    coming soon
+                  </span>
+                  
+                  {/* Sliding Quickshop Button */}
+                  <button className="absolute bottom-6 left-1/2 -translate-x-1/2 border-2 border-black rounded-full py-2.5 px-6 text-[9px] font-bold tracking-[0.2em] bg-white hover:bg-black hover:text-white transition-all uppercase opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 duration-300 shadow-sm cursor-pointer active:scale-95">
+                    quickshop
+                  </button>
+                </div>
+                
+                {/* Meta details */}
+                <div className="mt-4 text-center">
+                  <span className="text-[9px] font-bold tracking-[0.25em] text-neutral-400 uppercase font-mono block mb-1">
+                    luminaire clinical
+                  </span>
+                  <h3 className="font-serif text-base sm:text-lg text-black leading-tight lowercase">
+                    daily defense spf 50
+                  </h3>
+                  <span className="text-xs text-neutral-500 font-mono mt-1 block">
+                    $68
+                  </span>
+                </div>
+              </div>
+
+              {/* Product 4 (Placeholder Box) */}
+              <div className="group flex flex-col items-center select-none">
+                <div className="relative aspect-[3/4] w-full bg-[#f9f7f6] rounded-[24px] overflow-hidden flex flex-col items-center justify-center p-6 cursor-pointer">
+                  <span className="text-[10px] font-mono tracking-widest text-neutral-400 uppercase">
+                    coming soon
+                  </span>
+                  
+                  {/* Sliding Quickshop Button */}
+                  <button className="absolute bottom-6 left-1/2 -translate-x-1/2 border-2 border-black rounded-full py-2.5 px-6 text-[9px] font-bold tracking-[0.2em] bg-white hover:bg-black hover:text-white transition-all uppercase opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 duration-300 shadow-sm cursor-pointer active:scale-95">
+                    quickshop
+                  </button>
+                </div>
+                
+                {/* Meta details */}
+                <div className="mt-4 text-center">
+                  <span className="text-[9px] font-bold tracking-[0.25em] text-neutral-400 uppercase font-mono block mb-1">
+                    luminae clinical
+                  </span>
+                  <h3 className="font-serif text-base sm:text-lg text-black leading-tight lowercase">
+                    soothing recovery cream
+                  </h3>
+                  <span className="text-xs text-neutral-500 font-mono mt-1 block">
+                    $85
                   </span>
                 </div>
               </div>
