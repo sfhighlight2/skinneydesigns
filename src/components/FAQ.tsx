@@ -10,7 +10,7 @@ export function FAQ({ faqs }: { faqs: FAQType[] }) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-24">
           <div className="md:col-span-5">
-            <h2 className="text-4xl md:text-5xl font-serif text-[#2C2B29] mb-8 leading-tight">
+            <h2 className="text-3xl md:text-4xl lg:text-h2 font-serif text-[#2C2B29] mb-8 leading-tight">
               Frequently <span className="text-gray-400 italic">asked questions</span>
             </h2>
             <p className="text-lg text-gray-600">

@@ -20,7 +20,7 @@ export function ProductSection({ title, number, description, products, bgColor =
     <section className="py-24 md:py-32 overflow-hidden" style={{ background: bgColor }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 md:mb-24">
         <div className="flex flex-col md:flex-row gap-8 items-end justify-between">
-           <h2 className={`text-5xl md:text-7xl lg:text-[80px] font-serif ${textColorStyle}`}>{title}</h2>
+           <h2 className={`text-3xl md:text-4xl lg:text-h2 font-serif ${textColorStyle}`}>{title}</h2>
            <div className="flex items-start gap-6 max-w-md">
              <span className={`text-xl font-mono ${numColorStyle} ${numBgColorStyle} px-2 py-1 rounded w-fit`}>{number}</span>
              <p className={`text-lg font-medium leading-relaxed ${descColorStyle}`}>{description}</p>

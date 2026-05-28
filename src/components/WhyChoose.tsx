@@ -15,7 +15,7 @@ export function WhyChoose() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 md:gap-24 items-center">
           <div>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif text-[#2C2B29] leading-tight mb-8">
+            <h2 className="text-3xl md:text-4xl lg:text-h2 font-serif text-[#2C2B29] leading-tight mb-8">
               Why Patients Are Choosing <span className="text-gray-400">XERF</span>
             </h2>
             <p className="text-lg text-gray-600 leading-relaxed font-normal mb-12">

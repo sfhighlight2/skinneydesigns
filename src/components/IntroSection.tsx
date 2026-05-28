@@ -75,7 +75,7 @@ export function IntroSection() {
 
           {/* Right: Text Content */}
           <div className="flex flex-col max-w-[620px] lg:pl-10 xl:pl-20 mt-8 lg:mt-0">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif text-[#2C2B29] leading-tight mb-8">
+            <h2 className="text-3xl md:text-4xl lg:text-h2 font-serif text-[#2C2B29] leading-tight mb-8">
               Tighten, lift, and glow without surgery.
             </h2>
             

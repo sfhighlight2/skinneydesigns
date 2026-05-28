@@ -18,7 +18,7 @@ export function Hero() {
       <div className="relative z-10 w-full h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-end pb-24 md:pb-32">
         <div className="max-w-3xl">
           <p className="text-white/80 font-mono text-sm uppercase tracking-widest mb-6">FDA Cleared</p>
-          <h1 className="text-5xl md:text-7xl lg:text-[80px] font-serif text-white tracking-tight leading-[1.05] mb-6">
+          <h1 className="text-4xl md:text-5xl lg:text-h1 font-serif text-white tracking-tight leading-[1.05] mb-6">
             Lifted skin. No surgery.
           </h1>
           <p className="text-lg md:text-xl text-white/90 leading-relaxed font-normal mb-10 max-w-2xl">

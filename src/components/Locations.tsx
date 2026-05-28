@@ -31,7 +31,7 @@ export function Locations() {
         
         {/* Title Block */}
         <div className="text-center mb-16">
-          <h2 className="text-5xl md:text-7xl font-serif text-black leading-none mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-h2 font-serif text-black leading-none mb-6">
             medspa locations
           </h2>
           

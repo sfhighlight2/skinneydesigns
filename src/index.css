@@ -1,15 +1,73 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Space+Grotesk:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Roboto+Condensed:wght@300;400;500;700&family=Space+Grotesk:wght@400;500;600&display=swap');
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'Suisse';
+  src: local('Suisse'), local('Suisse Int\'l'), local('Suisse Intl'), local('Suisse-Regular'), url('/fonts/Suisse-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Suisse';
+  src: local('Suisse Medium'), local('Suisse Int\'l Medium'), local('Suisse Intl Medium'), local('Suisse-Medium'), url('/fonts/Suisse-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Suisse';
+  src: local('Suisse SemiBold'), local('Suisse Int\'l SemiBold'), local('Suisse Intl SemiBold'), local('Suisse-SemiBold'), local('Suisse Bold'), local('Suisse Int\'l Bold'), local('Suisse-Bold'), url('/fonts/Suisse-Bold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Suisse';
+  src: local('Suisse Bold'), local('Suisse Int\'l Bold'), local('Suisse Intl Bold'), local('Suisse-Bold'), url('/fonts/Suisse-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+
 @theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-serif: "Playfair Display", ui-serif, Georgia, serif;
+  --font-sans: "Suisse", "Roboto", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Suisse", "Roboto Condensed", sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-weight-medium: 400;
+  --font-weight-semibold: 400;
   --animate-scroll: scroll 30s linear infinite;
+  
+  --text-h1: 60px;
+  --text-h2: 52px;
+  --text-body: 16px;
   
   @keyframes scroll {
     0% { transform: translateX(0); }
     100% { transform: translateX(-50%); }
+  }
+}
+
+@layer base {
+  body {
+    font-size: 16px;
+    font-family: var(--font-sans);
+  }
+  h1 {
+    font-size: 60px;
+    font-family: var(--font-serif);
+    font-weight: 300;
+    text-transform: lowercase;
+  }
+  h2 {
+    font-size: 52px;
+    font-family: var(--font-serif);
+    font-weight: 300;
+    text-transform: lowercase;
+  }
+  h3, h4 {
+    text-transform: lowercase;
   }
 }
 
@@ -22,3 +80,4 @@
     display: none; /* Chrome, Safari and Opera */
   }
 }
+

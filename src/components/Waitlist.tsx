@@ -14,7 +14,7 @@ export function Waitlist() {
       
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
         <div className="bg-white rounded-[40px] p-8 md:p-16 shadow-sm border border-[#2C2B29]/10 text-center">
-          <h2 className="text-4xl md:text-5xl font-serif text-[#2C2B29] mb-6">Be the first to experience XERF in NYC</h2>
+          <h2 className="text-3xl md:text-4xl lg:text-h2 font-serif text-[#2C2B29] mb-6">Be the first to experience XERF in NYC</h2>
           <p className="text-lg text-gray-600 mb-10 max-w-3xl mx-auto">
             XERF Skin Tightening is coming to New York City, bringing one of the most advanced non-surgical tightening technologies to patients seeking real, visible results without downtime. As XERF's popularity spreads, early access spots will fill quickly.
           </p>
