@@ -13,6 +13,29 @@ import { xerfProducts, xerfTreatmentAreas, faqs } from './data';
 import showcaseImg from '../assets/52fc8607d98d5167945b70c8098f8693.png';
 import xerfProductLogo from '../assets/Xerf-Product-Logo-2-e1779192381585.png';
 
+// Scrolling Brand Partner Logos
+import vogueLogo from '../assets/Logos-Scrolling/Logo-Vogue.webp';
+import elleLogo from '../assets/Logos-Scrolling/Logo-Elle.webp';
+import allureLogo from '../assets/Logos-Scrolling/Allure-Logo.webp';
+import cosmopolitanLogo from '../assets/Logos-Scrolling/Cosmopolitan-Logo.webp';
+import bazaarLogo from '../assets/Logos-Scrolling/Logo-Bazaar.webp';
+import glamourLogo from '../assets/Logos-Scrolling/Logo-Glamour.webp';
+import forbesLogo from '../assets/Logos-Scrolling/Logo-Forbes.webp';
+import womensHealthLogo from '../assets/Logos-Scrolling/Logo-Womens-Health-.webp';
+import newBeautyLogo from '../assets/Logos-Scrolling/NewBeauty-Logo.webp';
+
+const partnerLogos = [
+  { name: 'Vogue', image: vogueLogo },
+  { name: 'Elle', image: elleLogo },
+  { name: 'Allure', image: allureLogo },
+  { name: 'Cosmopolitan', image: cosmopolitanLogo },
+  { name: 'Harper\'s Bazaar', image: bazaarLogo },
+  { name: 'Glamour', image: glamourLogo },
+  { name: 'Forbes', image: forbesLogo },
+  { name: 'Women\'s Health', image: womensHealthLogo },
+  { name: 'NewBeauty', image: newBeautyLogo }
+];
+
 function App() {
   return (
     <div className="min-h-screen bg-[#fbfaf8] selection:bg-[#2C2B29] selection:text-white font-sans">
@@ -25,42 +48,34 @@ function App() {
         <div className="absolute inset-y-0 left-0 w-16 md:w-32 bg-gradient-to-r from-[#2C2B29] to-transparent z-30 pointer-events-none"></div>
         <div className="absolute inset-y-0 right-0 w-16 md:w-32 bg-gradient-to-l from-[#2C2B29] to-transparent z-30 pointer-events-none"></div>
 
-        <div className="flex w-[200%] animate-scroll whitespace-nowrap text-white/30 text-sm md:text-base font-mono tracking-[0.25em] gap-16 md:gap-24 items-center select-none">
+        <div className="flex w-[200%] animate-scroll whitespace-nowrap gap-12 md:gap-16 items-center select-none">
           {/* First Scroll Set */}
-          <span className="shrink-0 flex items-center font-bold">VOGUE</span>
-          <span className="shrink-0 text-white/10 text-xs font-light">•</span>
-          <span className="shrink-0 flex items-center font-semibold">ELLE</span>
-          <span className="shrink-0 text-white/10 text-xs font-light">•</span>
-          <span className="shrink-0 flex items-center font-black">ALLURE</span>
-          <span className="shrink-0 text-white/10 text-xs font-light">•</span>
-          <span className="shrink-0 flex items-center font-serif italic tracking-[0.1em] font-normal text-lg">COSMOPOLITAN</span>
-          <span className="shrink-0 text-white/10 text-xs font-light">•</span>
-          <span className="shrink-0 flex items-center font-medium font-serif tracking-[0.15em] text-md">HARPER'S BAZAAR</span>
-          <span className="shrink-0 text-white/10 text-xs font-light">•</span>
-          <span className="shrink-0 flex items-center font-sans tracking-[0.3em] font-light">MARIE CLAIRE</span>
-          <span className="shrink-0 text-white/10 text-xs font-light">•</span>
-          <span className="shrink-0 flex items-center font-serif font-semibold tracking-normal lowercase text-[20px]">the new york times</span>
-          <span className="shrink-0 text-white/10 text-xs font-light">•</span>
-          <span className="shrink-0 flex items-center font-bold tracking-[0.05em]">FORBES</span>
-          <span className="shrink-0 text-white/10 text-xs font-light">•</span>
+          {partnerLogos.map((logo, idx) => (
+            <span key={`set1-${idx}`} className="shrink-0 flex items-center gap-12 md:gap-16">
+              <img 
+                src={logo.image} 
+                alt={logo.name} 
+                className="h-6 md:h-8 w-auto object-contain opacity-45 hover:opacity-85 transition-opacity duration-300 pointer-events-auto cursor-pointer"
+                style={{ filter: 'invert(1)', mixBlendMode: 'screen' }}
+                loading="lazy"
+              />
+              <span className="text-white/15 text-xs font-light select-none shrink-0">•</span>
+            </span>
+          ))}
 
           {/* Second Duplicate Scroll Set to ensure seamless infinite looping */}
-          <span className="shrink-0 flex items-center font-bold">VOGUE</span>
-          <span className="shrink-0 text-white/10 text-xs font-light">•</span>
-          <span className="shrink-0 flex items-center font-semibold">ELLE</span>
-          <span className="shrink-0 text-white/10 text-xs font-light">•</span>
-          <span className="shrink-0 flex items-center font-black">ALLURE</span>
-          <span className="shrink-0 text-white/10 text-xs font-light">•</span>
-          <span className="shrink-0 flex items-center font-serif italic tracking-[0.1em] font-normal text-lg">COSMOPOLITAN</span>
-          <span className="shrink-0 text-white/10 text-xs font-light">•</span>
-          <span className="shrink-0 flex items-center font-medium font-serif tracking-[0.15em] text-md">HARPER'S BAZAAR</span>
-          <span className="shrink-0 text-white/10 text-xs font-light">•</span>
-          <span className="shrink-0 flex items-center font-sans tracking-[0.3em] font-light">MARIE CLAIRE</span>
-          <span className="shrink-0 text-white/10 text-xs font-light">•</span>
-          <span className="shrink-0 flex items-center font-serif font-semibold tracking-normal lowercase text-[20px]">the new york times</span>
-          <span className="shrink-0 text-white/10 text-xs font-light">•</span>
-          <span className="shrink-0 flex items-center font-bold tracking-[0.05em]">FORBES</span>
-          <span className="shrink-0 text-white/10 text-xs font-light">•</span>
+          {partnerLogos.map((logo, idx) => (
+            <span key={`set2-${idx}`} className="shrink-0 flex items-center gap-12 md:gap-16">
+              <img 
+                src={logo.image} 
+                alt={logo.name} 
+                className="h-6 md:h-8 w-auto object-contain opacity-45 hover:opacity-85 transition-opacity duration-300 pointer-events-auto cursor-pointer"
+                style={{ filter: 'invert(1)', mixBlendMode: 'screen' }}
+                loading="lazy"
+              />
+              <span className="text-white/15 text-xs font-light select-none shrink-0">•</span>
+            </span>
+          ))}
         </div>
       </section>
 
